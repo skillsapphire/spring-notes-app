@@ -1,0 +1,95 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------------< com.mp:notes >----------------------------
+[INFO] Building notes 1.0.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ notes ---
+[INFO] Deleting E:\sw-work\notes\notes\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ notes ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ notes ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to E:\sw-work\notes\notes\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ notes ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\sw-work\notes\notes\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ notes ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to E:\sw-work\notes\notes\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ notes ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.mp.notes.NotesApplicationTests
+11:35:30.011 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:35:30.026 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:35:30.051 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.mp.notes.NotesApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:35:30.068 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mp.notes.NotesApplicationTests], using SpringBootContextLoader
+11:35:30.073 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.mp.notes.NotesApplicationTests]: class path resource [com/mp/notes/NotesApplicationTests-context.xml] does not exist
+11:35:30.073 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.mp.notes.NotesApplicationTests]: class path resource [com/mp/notes/NotesApplicationTestsContext.groovy] does not exist
+11:35:30.073 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.mp.notes.NotesApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:35:30.074 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mp.notes.NotesApplicationTests]: NotesApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:35:30.123 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.mp.notes.NotesApplicationTests]
+11:35:30.190 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\sw-work\notes\notes\target\classes\com\mp\notes\NotesApplication.class]
+11:35:30.192 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mp.notes.NotesApplication for test class com.mp.notes.NotesApplicationTests
+11:35:30.281 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.mp.notes.NotesApplicationTests]: using defaults.
+11:35:30.282 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+11:35:30.300 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1c5920df, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@17f9d882, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@79e4c792, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@196a42c3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c60d6e9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15043a2f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4a83a74a, org.springframework.test.context.event.EventPublishingTestExecutionListener@1349883, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4b29d1d2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7f485fda, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@28261e8e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@d737b89, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8519cb4]
+11:35:30.306 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@cc43f62 testClass = NotesApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5b218417 testClass = NotesApplicationTests, locations = '{}', classes = '{class com.mp.notes.NotesApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@79924b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4cc451f2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@79e2c065, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1b7cc17c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+11:35:30.346 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2020-03-26 11:35:30.590  INFO 16176 --- [           main] com.mp.notes.NotesApplicationTests       : Starting NotesApplicationTests on DESKTOP-MQHH72A with PID 16176 (started by Lenovo in E:\sw-work\notes\notes)
+2020-03-26 11:35:30.591  INFO 16176 --- [           main] com.mp.notes.NotesApplicationTests       : The following profiles are active: dev
+2020-03-26 11:35:31.308  INFO 16176 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-26 11:35:31.369  INFO 16176 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 1 repository interfaces.
+2020-03-26 11:35:31.724  INFO 16176 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-26 11:35:31.955  INFO 16176 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-26 11:35:32.022  INFO 16176 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2020-03-26 11:35:32.206  INFO 16176 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-26 11:35:32.561  INFO 16176 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-26 11:35:32.723  INFO 16176 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-26 11:35:32.737  INFO 16176 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-26 11:35:33.478  INFO 16176 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-26 11:35:33.495  INFO 16176 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-26 11:35:34.593  WARN 16176 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-26 11:35:35.131  INFO 16176 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-26 11:35:35.727  INFO 16176 --- [           main] com.mp.notes.NotesApplicationTests       : Started NotesApplicationTests in 5.368 seconds (JVM running for 6.958)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.88 s - in com.mp.notes.NotesApplicationTests
+2020-03-26 11:35:35.869  INFO 16176 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-26 11:35:35.871  INFO 16176 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-26 11:35:35.872  INFO 16176 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-26 11:35:35.883  INFO 16176 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ notes ---
+[INFO] Building jar: E:\sw-work\notes\notes\target\notes-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.1.RELEASE:repackage (repackage) @ notes ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.423 s
+[INFO] Finished at: 2020-03-26T11:35:37+05:30
+[INFO] ------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 package com.mp.notes.controller;
 
+import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,10 +13,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.mp.notes.entities.Note;
 import com.mp.notes.exception.ResourceNotFoundException;
 import com.mp.notes.repository.NoteRepository;
+import com.mp.notes.sorting.SortByCreatedOn;
+import com.mp.notes.sorting.SortByNoteId;
 
 @RestController
 @RequestMapping("/api")
@@ -38,8 +42,25 @@ public class NoteController {
 	}
 	
 	@GetMapping("/notes")
-	public List<Note> getNotes(){
-		return noteRepository.findAll();
+	public List<Note> getNotes(@RequestParam("field") String field, @RequestParam("type") String type){
+		
+		List<Note> allNotes = noteRepository.findAll();
+		if(field.equals("id")){
+			if(type.equals("asc")){
+				Collections.sort(allNotes,new SortByNoteId());
+			}else if(type.equals("desc")){
+				allNotes.sort(Collections.reverseOrder(new SortByNoteId()));
+			}
+		}else if(field.equals("creationDate")){
+			if(type.equals("asc")){
+				Collections.sort(allNotes,new SortByCreatedOn());
+			}else if(type.equals("desc")){
+				allNotes.sort(Collections.reverseOrder(new SortByCreatedOn()));
+			}
+
+		}
+		 
+		return allNotes;
 	}
 	
 	@DeleteMapping("notes/{id}")
