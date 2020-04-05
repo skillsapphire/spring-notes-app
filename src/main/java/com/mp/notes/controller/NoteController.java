@@ -88,15 +88,15 @@ public class NoteController {
 	}
 	//https://www.baeldung.com/spring-boot-evict-cache
 	//https://self-learning-java-tutorial.blogspot.com/2019/09/spring-cache-set-expiry-time-to-cache.html
-	@CacheEvict(allEntries = true, cacheNames = {"notes"})
+	@CacheEvict(allEntries = true, value = "notes")  // cacheNames = { "EMPLOYEE_", "MANAGER_" }
+	@Scheduled(fixedRate = 60000)
 	public void evictAllCaches(){
 		System.out.println("Clearing all cache");
-		evictAllCaches();
 	}
 	
+	//https://www.callicoder.com/spring-boot-task-scheduling-with-scheduled-annotation/
 	@Scheduled(fixedRate = 90000)
 	public void scheduledEvictAllCaches(){
-		System.out.println("Evicting cache started... ");
-		evictAllCaches();
+		System.out.println("Scheduler started... ");
 	}
 }
