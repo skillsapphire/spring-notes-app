@@ -94,8 +94,9 @@ public class NoteController {
 		evictAllCaches();
 	}
 	
-	@Scheduled(fixedRate = 9000)
+	@Scheduled(fixedRate = 90000)
 	public void scheduledEvictAllCaches(){
 		System.out.println("Evicting cache started... ");
+		evictAllCaches();
 	}
 }
