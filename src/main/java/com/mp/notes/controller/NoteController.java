@@ -6,8 +6,11 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -49,6 +52,8 @@ public class NoteController {
 	}
 	
 	@GetMapping("/notes")
+	@Cacheable("notes")
+	//https://howtodoinjava.com/spring-boot2/spring-boot-cache-example/
 	public List<Note> getNotes(@RequestParam (name = "field", required=true, defaultValue="id") String field, 
 			@RequestParam(name = "type", required=true, defaultValue="asc" )  String type){
 		
@@ -81,5 +86,16 @@ public class NoteController {
 	public Integer delAllNote(){
 		return null;
 	}
+	//https://www.baeldung.com/spring-boot-evict-cache
+	//https://self-learning-java-tutorial.blogspot.com/2019/09/spring-cache-set-expiry-time-to-cache.html
+	@CacheEvict(allEntries = true, cacheNames = {"notes"})
+	public void evictAllCaches(){
+		System.out.println("Clearing all cache");
+		evictAllCaches();
+	}
 	
+	@Scheduled(fixedRate = 9000)
+	public void scheduledEvictAllCaches(){
+		System.out.println("Evicting cache started... ");
+	}
 }
